@@ -1,10 +1,19 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Navbar from './components/navbar/Navbar'
+import Landing from './components/Landing'
 
 function App() {
   return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
+    <Router>
+      <>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+        </Switch>
+      </>
+    </Router>
   )
 }
 
